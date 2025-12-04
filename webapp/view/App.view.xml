@@ -1,0 +1,31 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName= "bbs.controller.App" 
+          xmlns:mvc = "sap.ui.core.mvc" 
+          xmlns ="sap.m" 
+          xmlns:form="sap.ui.layout.form" 
+>
+
+    <form:SimpleForm editable="true">
+        <form:title>
+            <core:Title text="Employee Details" icon="sap-icon://customer"/>
+        </form:title>
+        <form:content>
+            <Label text="Employee ID" />
+            <Input id="idEmpId" width="5%"/>
+            <Label text="Employee Name" />
+            <Input id="idEmpName" width="20%"/>
+            <Label text="Employee Salary" />
+            <Input id="idEmpSal" width="10%"/>
+            <Label text="Currency"/>
+            <Input id="idEmpCurr" width="5%"/>
+            <Label />
+            <Button id="idBtn" text="Reload" press="onReload" width="10%"/>
+        </form:content>
+    </form:SimpleForm>
+
+    <!-- <Input id="idText" placeholder="Enter Employee ID"/>
+    <Input id="idText1" placeholder="Enter Employee Name"/>
+    <Input id="idText2" placeholder="Enter Employee Salary"/>
+    <Input id="idText3" placeholder="Enter Employee Currency"/>
+    <Button id="oidBtn" press="onBtnClick" text="Submit" icon="sap-icon://home"/> -->
+
+</mvc:View>
