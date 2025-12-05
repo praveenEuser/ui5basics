@@ -10,6 +10,7 @@
         data-sap-ui-resourceroots='{
             "bbs" : "./"
         }'
+        data-sap-ui-bindingSyntax= "complex"
     ></script>
 
     <script>
@@ -22,8 +23,7 @@
 
         var oView1 = new sap.ui.view({
             viewName : "bbs.view.App",
-            type: "XML",
-            id : "idSml"
+            type: sap.ui.core.mvc.ViewType.XML,
         })
         oView1.placeAt("canvas")
 

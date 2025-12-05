@@ -1,0 +1,53 @@
+{
+    "empStr": {
+        "empId": 2000,
+        "empName": "Kumar",
+        "salary": 1023,
+        "currency": "INR",
+        "hunk" : true
+    },
+    "empTab": [
+        {
+            "empId": 201,
+            "empName": "Fahrin",
+            "salary": 2200,
+            "currency": "EUR"
+        },
+        {
+            "empId": 202,
+            "empName": "Dharani",
+            "salary": 6450,
+            "currency": "USD"
+        },
+        {
+            "empId": 203,
+            "empName": "Bharat",
+            "salary": 7874,
+            "currency": "INR"
+        },
+        {
+            "empId": 204,
+            "empName": "Vinith",
+            "salary": 4542,
+            "currency": "SGL"
+        },
+        {
+            "empId": 205,
+            "empName": "Rangan",
+            "salary": 5643,
+            "currency": "EUR"
+        },
+        {
+            "empId": 206,
+            "empName": "Kiran",
+            "salary": 3453,
+            "currency": "INR"
+        },
+        {
+            "empId": 207,
+            "empName": "Sandy",
+            "salary": 4533,
+            "currency": "USD"
+        }
+    ]
+}

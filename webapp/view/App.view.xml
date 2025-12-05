@@ -10,15 +10,16 @@
         </form:title>
         <form:content>
             <Label text="Employee ID" />
-            <Input id="idEmpId" width="5%"/>
+            <Input id="idEmpId" width="5%" value="{Second>/empStr/empId}" enabled="{/empStr/hunk}"/>
             <Label text="Employee Name" />
-            <Input id="idEmpName" width="20%"/>
+            <Input id="idEmpName" width="20%" value="{path:'Second>/empStr/empName'}" enabled="{/empStr/hunk}"/>
             <Label text="Employee Salary" />
-            <Input id="idEmpSal" width="10%"/>
+            <Input id="idEmpSal" width="10%" enabled="{/empStr/hunk}"/>
             <Label text="Currency"/>
-            <Input id="idEmpCurr" width="5%"/>
+            <Input id="idEmpCurr" width="5%" enabled="{/empStr/hunk}" />
             <Label />
-            <Button id="idBtn" text="Reload" press="onReload" width="10%"/>
+            <Button id="idBtn" text="Change Status" press="onLock" width="100%"/>
+            <Button id="idBtn2" text="Flip Model" press="onFlip" width="50%"/>
         </form:content>
     </form:SimpleForm>
 
