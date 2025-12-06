@@ -18,12 +18,13 @@ sap.ui.define([
                 //oXml = Models.createXMLModel("model/mockdata/mydata.xml");
                 //sap.ui.getCore().setModel(oXml);
 
-                //Option 3
-                var oSalary = this.oView.byId("idEmpSal");
-                oSalary.bindValue("Second>/empStr/salary");
-                //Option 4
-                var oCurr = this.oView.byId("idEmpCurr");
-                oCurr.bindProperty("value","Second>/empStr/currency");
+
+                // //Option 3
+                // var oSalary = this.oView.byId("idEmpSal");
+                // oSalary.bindValue("Second>/empStr/salary");
+                // //Option 4
+                // var oCurr = this.oView.byId("idEmpCurr");
+                // oCurr.bindProperty("value","Second>/empStr/currency");
             },
 
             onLock: function(){
@@ -53,6 +54,21 @@ sap.ui.define([
                 else{
                     oModel.setProperty("/empStr/hunk",true);
                 }
+            },
+            //Event Handler Function
+            oRowClick: function(oEvent){
+
+
+                //Step 1: What is the Row which was selected by user
+                var oGet = oEvent.getParameter("rowContext");
+                //Step 2: Know the address of the element
+                var sPath = oGet.getPath();
+                console.log(sPath);
+                //Step 3: Get the Object of the Simple Form
+                var oSimpleForm = this.getView().byId("idSimpF");
+                //Step 4: Perform Element Binding
+                oSimpleForm.bindElement(sPath);
+                
             },
             
             onFlip: function(){ 

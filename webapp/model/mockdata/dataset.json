@@ -11,43 +11,72 @@
             "empId": 201,
             "empName": "Fahrin",
             "salary": 2200,
-            "currency": "EUR"
+            "currency": "EUR",
+            "gender": "https://www.kgbv.telangana.gov.in/KGBV/images/client1.png",
+            "smoke" : false,
+            "m_status": "Yes",
+            "rating": 5
+
         },
         {
             "empId": 202,
             "empName": "Dharani",
             "salary": 6450,
-            "currency": "USD"
+            "currency": "USD",
+            "gender": "https://www.kgbv.telangana.gov.in/KGBV/images/client1.png",
+            "smoke" : true,
+            "m_status": "Yes",
+            "rating": 3
         },
         {
             "empId": 203,
-            "empName": "Bharat",
+            "empName": "Bharathi",
             "salary": 7874,
-            "currency": "INR"
+            "currency": "INR",
+            "gender": "https://cdn-icons-png.flaticon.com/512/4042/4042422.png",
+            "smoke" : true,
+            "m_status": "No",
+            "rating": 3.5
         },
         {
             "empId": 204,
-            "empName": "Vinith",
+            "empName": "Vinitha",
             "salary": 4542,
-            "currency": "SGL"
+            "currency": "SGL",
+            "gender": "https://cdn-icons-png.flaticon.com/512/4042/4042422.png",
+            "smoke" : false,
+            "m_status": "Yes",
+            "rating": 4
         },
         {
             "empId": 205,
             "empName": "Rangan",
             "salary": 5643,
-            "currency": "EUR"
+            "currency": "EUR",
+            "gender": "https://www.kgbv.telangana.gov.in/KGBV/images/client1.png",
+            "smoke" : false,
+            "m_status": "No",
+            "rating": 2
         },
         {
             "empId": 206,
             "empName": "Kiran",
             "salary": 3453,
-            "currency": "INR"
+            "currency": "INR",
+            "gender": "https://www.kgbv.telangana.gov.in/KGBV/images/client1.png",
+            "smoke" : true,
+            "m_status": "Yes",
+            "rating": 5
         },
         {
             "empId": 207,
-            "empName": "Sandy",
+            "empName": "Sandhya",
             "salary": 4533,
-            "currency": "USD"
+            "currency": "USD",
+            "gender": "https://cdn-icons-png.flaticon.com/512/4042/4042422.png",
+            "smoke" : false,
+            "m_status": "No",
+            "rating": 2.5
         }
     ]
 }

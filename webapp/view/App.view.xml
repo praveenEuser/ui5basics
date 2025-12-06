@@ -2,21 +2,95 @@
           xmlns:mvc = "sap.ui.core.mvc" 
           xmlns ="sap.m" 
           xmlns:form="sap.ui.layout.form" 
+          xmlns:t="sap.ui.table"
 >
 
-    <form:SimpleForm editable="true">
+    
+
+    <t:Table rows = "{/empTab}" visibleRowCount="5" selectionMode="Single" visibleRowCountMode="Interactive" rowSelectionChange="oRowClick">
+        <t:columns>
+            <t:Column >
+                <t:label>
+                    <Label text="Employee ID"></Label>
+                </t:label>
+                <t:template>
+                    <Text text="{empId}"  ></Text>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Employee Name"></Label>
+                </t:label>
+                <t:template>
+                    <Input value="{empName}"></Input>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Salary"></Label>
+                </t:label>
+                <t:template>
+                    <Text text="{salary} {currency}"></Text>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Currency"></Label>
+                </t:label>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Gender"></Label>
+                </t:label>
+                <t:template>
+                    <Image src="{gender}" width="40px" height="40px"></Image>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Smoking"></Label>
+                </t:label>
+                <t:template>
+                    <CheckBox selected="{smoke}"></CheckBox>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="M Status"></Label>
+                </t:label>
+                <t:template>
+                    <Select selectedKey="{m_status}">
+                        <items>
+                            <core:Item text="Married" key="Yes"/>
+                            <core:Item text="Single" key="No"/>
+                        </items>
+                    </Select>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Label text="Rating"></Label>
+                </t:label>
+                <t:template>
+                    <RatingIndicator value="{rating}"></RatingIndicator>
+                </t:template>
+            </t:Column>
+        </t:columns>
+    </t:Table>
+
+    <form:SimpleForm editable="true" id="idSimpF">
         <form:title>
             <core:Title text="Employee Details" icon="sap-icon://customer"/>
         </form:title>
         <form:content>
             <Label text="Employee ID" />
-            <Input id="idEmpId" width="5%" value="{Second>/empStr/empId}" enabled="{/empStr/hunk}"/>
+            <Input id="idEmpId" width="5%" value="{empId}" enabled="{/empStr/hunk}"/>
             <Label text="Employee Name" />
-            <Input id="idEmpName" width="20%" value="{path:'Second>/empStr/empName'}" enabled="{/empStr/hunk}"/>
+            <Input id="idEmpName" width="20%" value="{empName}" enabled="{/empStr/hunk}"/>
             <Label text="Employee Salary" />
-            <Input id="idEmpSal" width="10%" enabled="{/empStr/hunk}"/>
+            <Input id="idEmpSal" width="10%" value="{salary}" enabled="{/empStr/hunk}"/>
             <Label text="Currency"/>
-            <Input id="idEmpCurr" width="5%" enabled="{/empStr/hunk}" />
+            <Input id="idEmpCurr" width="5%" value="{currency}" enabled="{/empStr/hunk}" />
             <Label />
             <Button id="idBtn" text="Change Status" press="onLock" width="100%"/>
             <Button id="idBtn2" text="Flip Model" press="onFlip" width="50%"/>
