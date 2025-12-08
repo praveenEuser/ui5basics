@@ -1,7 +1,8 @@
 sap.ui.define([
     'sap/ui/model/json/JSONModel',
-    'sap/ui/model/xml/XMLModel'
-], function (JSONModel) {
+    'sap/ui/model/xml/XMLModel',
+    'sap/ui/model/resource/ResourceModel'
+], function (JSONModel, XMLModel, ResourceModel) {
     'use strict';
     return {
         createJSONModel: function (sFilePath) {
@@ -21,7 +22,10 @@ sap.ui.define([
             return oModel;
         },
         createResourceModel: function () {
-
+            var oModel = new ResourceModel({
+                bundleName: "bbs.i18n.i18n"
+            });
+            return oModel;
         }
     }
 }

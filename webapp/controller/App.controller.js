@@ -1,20 +1,27 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller', 
-    'bbs/model/models'
-], function (Controller, Models) {
+    'bbs/model/models',
+    'bbs/util/formatter'
+], function (Controller, Models, Formatter) {
         return Controller.extend("bbs.controller.App",{
+            formatter:Formatter,
             onInit: function(){
                 this.oView = this.getView();
                 //Calling our own reuse class to create model object
                 oModel = Models.createJSONModel("model/mockdata/dataset.json");
                 //oModel.setDefaultBindingMode("OneWay");
-                //Step 3: Make the model aware to the Application
+                //St ep 3: Make the model aware to the Application
                 sap.ui.getCore().setModel(oModel); //a model with no name is default model
+
+                oModel2 = Models.createResourceModel();
+                //Named Model
+                sap.ui.getCore().setModel(oModel2, "i18n");
 
                 oModel1 = Models.createJSONModel("model/mockdata/sample.json");
                 //Named Model
                 sap.ui.getCore().setModel(oModel1, "Second");
-
+                
+                
                 //oXml = Models.createXMLModel("model/mockdata/mydata.xml");
                 //sap.ui.getCore().setModel(oXml);
 
@@ -70,6 +77,8 @@ sap.ui.define([
                 oSimpleForm.bindElement(sPath);
                 
             },
+
+            
             
             onFlip: function(){ 
 
